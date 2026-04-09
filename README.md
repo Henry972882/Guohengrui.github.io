@@ -1,22 +1,19 @@
-# 郭恒瑞个人主页
+﻿# 郭恒瑞个人主页
 
 这是一个可以直接上传到 GitHub 的静态个人主页项目。
-当前版本已经把个人照片直接嵌入 `index.html`，上传时不依赖额外图片路径。
+当前版本使用仓库根目录下的 `profile.jpg` 作为照片文件，结构简单，适合直接部署到 GitHub Pages。
 
 ## 文件说明
 
 - `index.html`：主页主文件
 - `style.css`：页面样式文件
+- `profile.jpg`：个人照片
 - `.nojekyll`：保证 GitHub Pages 以静态站点方式直接发布
-
-## 本地预览
-
-直接用浏览器打开 `index.html` 即可查看页面效果。
 
 ## 上传到 GitHub
 
 1. 在 GitHub 新建一个仓库
-2. 把 `index.html`、`style.css`、`README.md`、`.nojekyll` 上传到仓库根目录
+2. 把 `index.html`、`style.css`、`profile.jpg`、`README.md`、`.nojekyll` 上传到仓库根目录
 3. 提交后即可在仓库中查看源码
 
 ## 发布为 GitHub Pages
@@ -32,8 +29,6 @@
 
 ## 页面内容
 
-主页当前包含以下信息：
-
 - 姓名：郭恒瑞
 - 专业：日语
 - 职务：外院学术部部长
@@ -45,5 +40,3 @@
 - 辩论荣誉：
   - 第30届联合杯冠军
   - 瀛泰杯法律交流赛亚军
-
-你也可以继续补充联系方式、技能证书、获奖经历和个人邮箱等内容。
