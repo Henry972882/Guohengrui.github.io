@@ -1,12 +1,13 @@
 # 郭恒瑞个人主页
 
 这是一个可以直接上传到 GitHub 的静态个人主页项目。
+当前版本已经把个人照片直接嵌入 `index.html`，上传时不依赖额外图片路径。
 
 ## 文件说明
 
 - `index.html`：主页主文件
 - `style.css`：页面样式文件
-- `assets/profile.jpg`：个人照片
+- `.nojekyll`：保证 GitHub Pages 以静态站点方式直接发布
 
 ## 本地预览
 
@@ -15,7 +16,7 @@
 ## 上传到 GitHub
 
 1. 在 GitHub 新建一个仓库
-2. 把本项目所有文件上传到仓库根目录
+2. 把 `index.html`、`style.css`、`README.md`、`.nojekyll` 上传到仓库根目录
 3. 提交后即可在仓库中查看源码
 
 ## 发布为 GitHub Pages
