@@ -68,6 +68,12 @@ body::before {
   margin-bottom: 40px;
 }
 
+.nav-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
 .brand,
 .nav-link,
 .section-label,
@@ -89,13 +95,40 @@ body::before {
 
 .hero-content {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.9fr);
-  gap: 24px;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.3fr);
+  gap: 28px;
   align-items: stretch;
 }
 
+.hero-photo-wrap {
+  position: relative;
+  min-height: 100%;
+}
+
+.hero-photo {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  object-fit: cover;
+  display: block;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.photo-note {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(31, 27, 24, 0.68);
+  color: #f8efe2;
+  font-size: 0.9rem;
+  backdrop-filter: blur(12px);
+}
+
 .hero-text {
-  padding: 12px 8px 12px 4px;
+  padding: 20px 8px 12px 4px;
 }
 
 .eyebrow,
@@ -149,44 +182,29 @@ h1 {
   background: rgba(255, 255, 255, 0.64);
 }
 
+.hero-quote {
+  margin-top: 28px;
+  padding: 18px 20px;
+  border-left: 4px solid var(--gold);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.hero-quote p {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Noto Serif SC", serif;
+  font-size: 1.05rem;
+}
+
 .profile-card {
   padding: 28px;
   border-radius: 28px;
   background:
-    linear-gradient(180deg, rgba(57, 89, 75, 0.94), rgba(39, 63, 53, 0.92)),
-    linear-gradient(120deg, rgba(255, 255, 255, 0.05), transparent);
-  color: #f9f2e7;
+    linear-gradient(180deg, rgba(255, 250, 244, 0.86), rgba(249, 242, 232, 0.82));
+  color: var(--ink);
   position: relative;
   overflow: hidden;
-}
-
-.profile-card::after {
-  content: "";
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  right: -60px;
-  top: -50px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.16), transparent 70%);
-}
-
-.avatar {
-  width: 88px;
-  height: 88px;
-  border-radius: 24px;
-  display: grid;
-  place-items: center;
-  margin-bottom: 18px;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--forest);
-  background: linear-gradient(135deg, #f0dfc2, #ffffff);
-}
-
-.profile-card h2 {
-  font-size: 1.6rem;
-  margin-bottom: 18px;
 }
 
 .profile-list {
@@ -202,11 +220,11 @@ h1 {
   justify-content: space-between;
   gap: 16px;
   padding-bottom: 12px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom: 1px solid rgba(57, 89, 75, 0.12);
 }
 
 .profile-list span {
-  color: rgba(249, 242, 231, 0.78);
+  color: var(--muted);
 }
 
 .profile-list strong {
@@ -230,6 +248,86 @@ main {
 
 .cards-row {
   grid-template-columns: repeat(3, 1fr);
+  margin-top: 24px;
+}
+
+.feature-block {
+  margin-top: 24px;
+  padding: 28px;
+  border-radius: 28px;
+  border: 1px solid var(--line);
+  background: rgba(255, 250, 244, 0.72);
+  box-shadow: var(--shadow);
+}
+
+.feature-heading {
+  margin-bottom: 18px;
+}
+
+.timeline {
+  display: grid;
+  gap: 18px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: 18px;
+  align-items: start;
+  padding: 22px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.56);
+  border: 1px solid rgba(57, 89, 75, 0.1);
+}
+
+.timeline-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--forest), #4b7260);
+  color: #fff7ee;
+  font-weight: 700;
+}
+
+.timeline-item h3,
+.honor-card h3 {
+  margin-bottom: 10px;
+}
+
+.honor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.honor-card {
+  padding: 24px;
+  border-radius: 24px;
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.76), rgba(247, 239, 229, 0.9));
+  border: 1px solid rgba(184, 135, 70, 0.16);
+}
+
+.honor-badge {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(184, 135, 70, 0.16);
+  color: #8f5f22;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.honor-badge.secondary {
+  background: rgba(57, 89, 75, 0.14);
+  color: var(--forest);
+}
+
+.extra-grid {
   margin-top: 24px;
 }
 
@@ -309,7 +407,8 @@ main {
   .hero-content,
   .section-grid,
   .cards-row,
-  .highlight {
+  .highlight,
+  .honor-grid {
     grid-template-columns: 1fr;
     flex-direction: column;
   }
@@ -320,6 +419,14 @@ main {
 
   .highlight {
     align-items: flex-start;
+  }
+
+  .hero-photo {
+    min-height: 420px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -337,6 +444,9 @@ main {
   }
 
   .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
     margin-bottom: 28px;
   }
 
@@ -346,5 +456,9 @@ main {
 
   .profile-list strong {
     text-align: left;
+  }
+
+  .hero-photo {
+    min-height: 340px;
   }
 }
